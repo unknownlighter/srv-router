@@ -13,7 +13,7 @@ If you have questions, suggestions or ideas about how to improve this, please op
 Usage
 -----
 
-SRV Router is distributed as a docker container (if you want a standalone installation, the Dockerfile should give you enough information on how to do it on your own). You can run the container on boot and have it shared the host's network and listen of port 80. You can provide configuration setting the follwing environment variables from the docker run command:
+SRV Router is distributed as a docker container available in the docker index as a trusted build (if you want a standalone installation, the Dockerfile should give you enough information on how to do it on your own). You can run the container on boot and have it shared the host's network and listen of port 80. You can provide configuration setting the follwing environment variables from the docker run command:
 
 * NS_IP: The DNS server IP (default: 127.0.0.1)
 * NS_PORT: The port where the DNS server's listening (default: 53)
