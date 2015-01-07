@@ -24,6 +24,10 @@ function service_name(reqdomain)
                         pattern = "%.?" .. domain -- includes separation dot if present
                         --log("pattern: " .. pattern)
                         upstream = string.gsub(reqdomain,pattern,"")
+
+                        -- strip the port from the host header
+                        upstream = string.gsub(upstream,":%d+","")
+
                         if upstream == "" then
                                 return "home"
                         end
