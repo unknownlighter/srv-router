@@ -31,8 +31,8 @@ function service_name(reqdomain)
                         if upstream == "" then
                                 return "home"
                         end
-                        -- return leftmost zone (in case further subdomains exists)
-                        return string.match(upstream,"[^\\.]*$")
+
+                        return upstream
                 else
                         log("no match :(")
                 end
