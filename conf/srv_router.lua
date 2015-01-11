@@ -32,7 +32,13 @@ function service_name(reqdomain)
                                 return "home"
                         end
 
-                        return upstream
+                        -- return full subdomain if keep_tags in enabled
+                        if ngx.var.keep_tags == "true" then
+                                return upstream
+                        end
+
+                        -- return leftmost zone if keep_tags is disabled (in case further subdomains exists)
+                        return string.match(upstream,"[^\\.]*$")
                 else
                         log("no match :(")
                 end

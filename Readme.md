@@ -19,6 +19,7 @@ SRV Router is distributed as a docker container available in the docker index as
 * NS_PORT: The port where the DNS server's listening (default: 53)
 * TARGET: The DNS domain to use in service discovery queries (default: service.consul). More info below.
 * DOMAINS: Comma separated list of external domains that the balanced services handle (default: lvh.me,127.0.0.1.xip.io,9zlhb.xip.io). More info below.
+* KEEP_TAGS: Set to ``true`` to enable compatibility with consul tags.  Controls whether subdomains are preserved in the URL passed to the backend DNS lookup. (default: false)
 
 For an example Systemd service definition check the misc folder in the repo.
 
