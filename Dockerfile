@@ -17,5 +17,6 @@ ENV NS_IP 127.0.0.1
 ENV NS_PORT 53
 ENV TARGET service.consul
 ENV DOMAINS lvh.me,127.0.0.1.xip.io,9zlhb.xip.io
+ENV KEEP_TAGS false
 
 CMD ["/usr/bin/nginx", "-p", "/nginx/", "-c", "conf/nginx.conf"]
